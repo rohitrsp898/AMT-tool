@@ -8,7 +8,7 @@ body{
     width:1250px;
   }
   .left {
-    width:800px;
+    width:860px;
     float:left;
     font-size: medium;
   }
@@ -45,7 +45,7 @@ body{
     /* margin: 8px 0; */
     border: 0ex;
     cursor: pointer;
-    width: 30%;
+    width: 33.5%;
     font-size: 15px;
     border-radius: 5px;
     

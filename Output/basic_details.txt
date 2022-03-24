@@ -1,9 +1,9 @@
 Basic Comaprison
 ----------------
-S3 Source file Path : s3://ideakafkatest/idea-cdf-ftp-20220120145144453/ftp/facts/INVENTORIES.csv
-S3 Source Columns : ('PRODUCT_ID', 'WAREHOUSE_ID', 'QUANTITY\n')
-S3 Source Columns count : 3
-S3 Source records count : 1112
+Teradata table : IDEA_QA_TEST_DB.IDEA_Perf_Load_Test15
+Teradata 'IDEA_QA_TEST_DB.IDEA_Perf_Load_Test15' table Columns : ('ACCOUNT_NO', 'DISTRICT_ID', 'CREATE_DATE', 'FREQUENCY')
+Teradata 'IDEA_QA_TEST_DB.IDEA_Perf_Load_Test15' table Columns count : 4
+Teradata 'IDEA_QA_TEST_DB.IDEA_Perf_Load_Test15' table records count : 196772621
 
 S3 Sink file Path : s3://ideakafkatest/idea-cdf-ftp-20220120145144453/ftp/facts/same
 S3 Sink file Columns : ('PRODUCT_ID', 'WAREHOUSE_ID', 'QUANTITY\n')

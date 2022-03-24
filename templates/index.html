@@ -14,17 +14,17 @@
         <h3 style="color: red;">{{validation}}</h3></div>
     </div>
     <div class="right">
-        <div id="data" align="left" style="width:450px; float:right; font-size: 12px;" >     
+        <div id="data" align="left" style="width:380px; float:right; font-size: 12px;" >     
           <pre style="text-align: left; color: #0070AD;"><b>Provide Source and Sink details in below formats.
-
-ftp/Sftp   : /path/to/file.csv    [Not supported in Basic]
-S3         : s3://bucket/path/to/folder or file.csv
-Teradata   : Give DB and Table name as - db.table
-Snowflake  : Give DB, Schema and Table name as - db.schema.table
+Give Details in below formats
+ftp/Sftp  : /path/file.csv [Not supported in Basic]
+S3        : s3://bucket/path/folder or file.csv
+Teradata  : db.table
+Snowflake : db.schema.table
 
 Note: 
-- If Credentials changed please navigate to congfig.ini file 
-and respective odbc to update the credentials.
+- If Credentials changed please navigate to congfig.ini 
+file and respective odbc to update the credentials.
 - Don't use more than 3 multiple sessions.
           <br></b></pre>
 
@@ -48,7 +48,7 @@ and respective odbc to update the credentials.
           <!-- <option value="sql_server">SQL Server</option>   -->
 
       <label> Source Details :</label>
-      <input type="text" name="source_path" value="" style="width: 440px; height: 25px; font-size: 13px;">
+      <input type="text" name="source_path" value="" style="width: 503px; height: 20px; font-size: 13px;">
               <br><br>
 
       <label> Select Sink : </label>
@@ -60,16 +60,17 @@ and respective odbc to update the credentials.
           <option value="snow">Snow MVP</option> </SELECT>
 
       <label> Sink Details :</label>
-      <input type="text" name="sink_path" value="" style="width: 480px; height: 25px; font-size: 13px;">
+      <input type="text" name="sink_path" value="" style="width: 542px; height: 20px; font-size: 12px;">
           <br><br>
     </div>
       
 
-      <button name="btn" value="detail" onclick="$('#loading').show();">Detail</button> <button name="btn" value="basic" onclick="$('#loading').show();">Basic</button>
+      <button name="btn" value="detail" onclick="$('#loading').show();">Detail</button> 
+      <button name="btn" value="basic" onclick="$('#loading').show();">Basic</button>
               <!-- <button id= overview onclick="$('#loading').show();">Overview</button>  -->
               
       <div align="center" id="loading" style="display:none; color: #0070AD;"><img src="https://i.gifer.com/Vp3L.gif" alt="" />
-                <center>Loading...</center></div>
+      </div>
           
         <div id="content">
                 
@@ -80,9 +81,11 @@ and respective odbc to update the credentials.
           {% else %}
           <p style="color: #0070AD; padding: 10px;"><b>{{status}}</b></p>  
           <p style="color: #056192; padding: 10px;">{{file_locations}}</p> 
-          <pre style="padding: 10px; font-size: 16px;">{{data}}</pre> 
+          <textarea readonly name="data" style="width: 67%; height: 400px; font-size: 13px;">{{data}}</textarea>
+          {% endif %}
+          <!-- <pre style="padding: 10px; font-size: 16px;">{{data}}</pre> -->
         
-          {% endif %}   
+         
     </form>
   </div> 
 
