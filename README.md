@@ -7,7 +7,7 @@ This tool is written on the python3 version and mostly based on the Pandas Dataf
 Below are the source and sink systems-
 -	Source - FTP, sFTP, Teradata. Oracle and SQL Server.
 -	Sink - AWS S3, Redshift and Snowflake.
-
+-----------------------------------------------------------------------------------------------
 Functionality-
 1.	It will compare source and sink dataframes if there is any mismatched it will store those details into separate csv and also generate simple reports using datacompy package.
 2.	It will generate five csv files and two text files as below-
@@ -27,7 +27,7 @@ Functionality-
 
 •	errors.txt – All the exception and errors will be stored here.
 
-
+----------------------------------------------------------------------------------------
 Requirements-
 Tools - Python 3.8 (64 bit) or higher, Excel or any text editor tool to view the csv file.
 
