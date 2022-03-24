@@ -1,0 +1,62 @@
+body{
+    background-color: #e9eff5; 
+    background-image:"static\pngwing.com.png" ;
+      font-family:Helvetica, Arial, sans-serif;
+      font-size: medium;}   
+      
+  .container {
+    width:1250px;
+  }
+  .left {
+    width:800px;
+    float:left;
+    font-size: medium;
+  }
+   
+  .center{
+    width: 5px;
+  }
+
+  select{
+    width: 95px;
+    height: 25px;
+    font-size: 13.5px;
+    color: #0070AD;
+    background-color: #fefeff;
+  }
+  label{
+    font-size: 15px;
+    color: #0070AD;
+    font-weight:bold;
+  }
+  input[type=text]{
+    width: 400px;
+    height: 25px;
+    font-size: 13px;
+    color: #0070AD;
+    
+  }
+
+  button{
+    background-color: #0070AD;
+    color: white;
+    padding: 8px 8px;
+    font-weight: bold;
+    /* margin: 8px 0; */
+    border: 0ex;
+    cursor: pointer;
+    width: 30%;
+    font-size: 15px;
+    border-radius: 5px;
+    
+  }
+ input[type=radio]{
+  font-size: 15px;
+  color: #0070AD;
+  font-weight:bold;
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+  transform: scale(1.5)
+ }
+ /* .src {display: none;} */
+

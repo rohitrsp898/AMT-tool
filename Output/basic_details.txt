@@ -1,0 +1,12 @@
+Basic Comaprison
+----------------
+S3 Source file Path : s3://ideakafkatest/idea-cdf-ftp-20220120145144453/ftp/facts/INVENTORIES.csv
+S3 Source Columns : ('PRODUCT_ID', 'WAREHOUSE_ID', 'QUANTITY\n')
+S3 Source Columns count : 3
+S3 Source records count : 1112
+
+S3 Sink file Path : s3://ideakafkatest/idea-cdf-ftp-20220120145144453/ftp/facts/same
+S3 Sink file Columns : ('PRODUCT_ID', 'WAREHOUSE_ID', 'QUANTITY\n')
+S3 Sink file Columns count : 3
+S3 Sink file records count : 2228
+

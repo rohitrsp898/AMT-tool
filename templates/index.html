@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block head %}
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+{% endblock %}
+
+
+{% block body %}
+
+  <div class="row">
+    <div class="page-header-left" style="float: left;">
+        <img src="static\logo.png" width="170" height="42" style="padding: 3px;"></img>
+    </div>
+    <div class="page-header-right" ><h1 style="padding: 3px; color: #0070AD;"><center>Automated Migration Testing Tool</center></h1>
+        <h3 style="color: red;">{{validation}}</h3></div>
+    </div>
+    <div class="right">
+        <div id="data" align="left" style="width:450px; float:right; font-size: 12px;" >     
+          <pre style="text-align: left; color: #0070AD;"><b>Provide Source and Sink details in below formats.
+
+ftp/Sftp   : /path/to/file.csv    [Not supported in Basic]
+S3         : s3://bucket/path/to/folder or file.csv
+Teradata   : Give DB and Table name as - db.table
+Snowflake  : Give DB, Schema and Table name as - db.schema.table
+
+Note: 
+- If Credentials changed please navigate to congfig.ini file 
+and respective odbc to update the credentials.
+- Don't use more than 3 multiple sessions.
+          <br></b></pre>
+
+          <pre style="color: red;">{{error}}</pre>
+        </div>
+    </div>
+    <br>
+  <div class="center"> </div>
+  <div class="left">
+    <form action="/" method="post" >    
+
+      
+      <label> Select Source :  </label>
+      <SELECT name="source" >
+        <option selected>Select</option>
+          <option value="s3_source" >S3</option>
+          <option value="ftp" >FTP</option>
+          <option value="sftp">SFTP</option>  
+          <!-- <option value="oracle">Oracle</option> -->
+          <option value="teradata">Teradata</option></SELECT>
+          <!-- <option value="sql_server">SQL Server</option>   -->
+
+      <label> Source Details :</label>
+      <input type="text" name="source_path" value="" style="width: 440px; height: 25px; font-size: 13px;">
+              <br><br>
+
+      <label> Select Sink : </label>
+
+      <SELECT name="sink">
+          <option selected>Select</option>
+          <option value="s3_sink" >S3</option>
+          <option value="snowqa">Snow QA</option>
+          <option value="snow">Snow MVP</option> </SELECT>
+
+      <label> Sink Details :</label>
+      <input type="text" name="sink_path" value="" style="width: 480px; height: 25px; font-size: 13px;">
+          <br><br>
+    </div>
+      
+
+      <button name="btn" value="detail" onclick="$('#loading').show();">Detail</button> <button name="btn" value="basic" onclick="$('#loading').show();">Basic</button>
+              <!-- <button id= overview onclick="$('#loading').show();">Overview</button>  -->
+              
+      <div align="center" id="loading" style="display:none; color: #0070AD;"><img src="https://i.gifer.com/Vp3L.gif" alt="" />
+                <center>Loading...</center></div>
+          
+        <div id="content">
+                
+          {% if "ERROR" in status %}     
+          <!-- <p style="color: #ff0000; padding: 10px;"><b>ERROR: Something Went Wrong! Plaese provide correct details!! </b> </p> -->
+          <p style="color: #ff0000; padding: 10px;"><b>{{status}}</b></p>  
+          <!-- <pre style="padding: 10px; font-size: 16px;">{{data}}</pre> -->
+          {% else %}
+          <p style="color: #0070AD; padding: 10px;"><b>{{status}}</b></p>  
+          <p style="color: #056192; padding: 10px;">{{file_locations}}</p> 
+          <pre style="padding: 10px; font-size: 16px;">{{data}}</pre> 
+        
+          {% endif %}   
+    </form>
+  </div> 
+
+    
+{% endblock %}

@@ -1,0 +1,8 @@
+-------- Error Logs --------
+
+
+--- Exception 2022-03-24 20:55:56---
+Can only compare identically-labeled DataFrame objects
+
+--- Message 2022-03-24 20:55:56 ---
+Dataframe have suffled/mismatched records

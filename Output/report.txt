@@ -1,0 +1,66 @@
+--------- Summary Report ----------
+Ftp file Path : /facts/facts/INVENTORIES.csv
+Ftp file Columns : ('PRODUCT_ID', 'WAREHOUSE_ID', 'QUANTITY')
+Ftp file Columns count : 3
+Ftp file records count : 1112
+
+S3 Sink file Path : s3://ideakafkatest/idea-cdf-ftp-20220120145144453/ftp/facts/same
+S3 Sink file Columns : ('PRODUCT_ID', 'WAREHOUSE_ID', 'QUANTITY')
+S3 Sink file Columns count : 3
+S3 Sink file records count : 2228
+
+DataComPy Comparison
+--------------------
+
+DataFrame Summary
+-----------------
+
+  DataFrame  Columns  Rows
+0    Source        3  1112
+1      Sink        3  2228
+
+Column Summary
+--------------
+
+Number of columns in common: 3
+Number of columns in Source but not in Sink: 0
+Number of columns in Sink but not in Source: 0
+
+Row Summary
+-----------
+
+Matched on: product_id, warehouse_id, quantity
+Any duplicates on match values: Yes
+Absolute Tolerance: 0
+Relative Tolerance: 0
+Number of rows in common: 1,112
+Number of rows in Source but not in Sink: 0
+Number of rows in Sink but not in Source: 1,116
+
+Number of rows with some compared columns unequal: 0
+Number of rows with all compared columns equal: 1,112
+
+Column Comparison
+-----------------
+
+Number of columns compared with some values unequal: 0
+Number of columns compared with all values equal: 3
+Total number of values which compare unequal: 0
+
+Sample Rows Only in Sink (First 10 Columns)
+-------------------------------------------
+
+      product_id  warehouse_id  quantity
+2025         123             7        41
+1245          90             2       167
+1376          80             3       101
+1717         148             5        50
+1131         212             9       111
+1500         286             8       177
+1553         106             9         6
+1440          69             4        76
+1512          14             9        38
+1180         207             1       205
+
+
+Total Time took - - : 0:00:07
